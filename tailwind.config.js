@@ -12,7 +12,7 @@ module.exports = {
       },
       backgroundColor: {
         'button-main': '#4CB4F6',
-        content: '#124E85',
+        content: '#2E3856',
         main: '#4CB4F6',
       },
       borderColor: {
@@ -20,6 +20,8 @@ module.exports = {
       },
       width: {
         '574px': '574px',
+        '4/5': '80%',
+        '1/5': '20%',
       },
     },
   },

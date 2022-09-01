@@ -13,13 +13,21 @@ body {
   font-size: 3rem;
   font-weight: 500;
 }
+
+a {
+  color: #ffffff
+}
+a:hover {
+  color: currentColor;
+}
 // input css
 input {
   outline: none;
   padding: 12px 12px;
-  border-radius: 4px;
 }
 input::placeholder {
   color: #586b8b;
   font-style: italic;
+  font-weight: 500;
+
 }
