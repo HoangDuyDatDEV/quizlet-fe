@@ -1,10 +1,19 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  ssr: false,
+  server: {
+    port: 8080,
+  },
+
+  publicRuntimeConfig: {
+    appName: process.env.APP_NAME || 'Hệ thống nhận dạng HAS',
+  },
+  privateRuntimeConfig: {},
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'quizlet',
+    title: process.env.APP_NAME,
     htmlAttrs: {
       lang: 'en',
     },
@@ -15,16 +24,19 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    bodyAttrs: {
+      class: 'font-body text-base text-white',
+    },
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['ant-design-vue/dist/antd.css', '@/assets/css/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/ant-design-vue.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: ['~/components'],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -34,12 +46,18 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/svg-sprite',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // https://go.nuxtjs.dev/pwa
+    '@nuxtjs/pwa',
+    // https://go.nuxtjs.dev/content
+    '@nuxt/content',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -48,6 +66,20 @@ export default {
     baseURL: '/',
   },
 
+  // PWA module configuration: https://go.nuxtjs.dev/pwa
+  pwa: {
+    manifest: {
+      lang: 'en',
+    },
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  googleFonts: {
+    download: true,
+    families: {
+      Poppins: [400, 500, 700],
+    },
+  },
 }

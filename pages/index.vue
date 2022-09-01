@@ -1,9 +1,10 @@
 <template>
-  <Tutorial />
+  <HomePageMain />
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'TrangChu',
+  layout: 'DefaultLayout',
 }
 </script>

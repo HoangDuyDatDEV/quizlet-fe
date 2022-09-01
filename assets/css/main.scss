@@ -1,0 +1,25 @@
+html {
+  font-size: 16px;
+  color: #586b8b;
+  --brand: #4c6fff;
+  --text-content: #586b8b;
+  --text-title: #3d5586;
+  --border-normal: #eceef7;
+}
+body {
+  background: #0a092d;
+}
+.text-header {
+  font-size: 3rem;
+  font-weight: 500;
+}
+// input css
+input {
+  outline: none;
+  padding: 12px 12px;
+  border-radius: 4px;
+}
+input::placeholder {
+  color: #586b8b;
+  font-style: italic;
+}
