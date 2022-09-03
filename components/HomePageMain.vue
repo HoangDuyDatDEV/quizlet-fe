@@ -7,9 +7,15 @@
         <span>02 lớp học được tạo</span>
       </div>
       <div class="w-full flex flex-wrap relative">
-        <div v-for="(card, index) in dataCard" :key="`class-${index}`" class="relative hover-card-item mr-4 my-2"
-          style="width: 24%">
-          <div class="bg-content space-y-3 rounded py-3 px-3 cursor-pointer hover:bg-gray-500 transition">
+        <div
+          v-for="(card, index) in dataCard"
+          :key="`class-${index}`"
+          class="relative hover-card-item mr-4 my-2"
+          style="width: 24%"
+        >
+          <div
+            class="bg-content space-y-3 rounded py-3 px-3 cursor-pointer hover:bg-gray-500 transition"
+          >
             <div class="font-bold">{{ card.className }}</div>
             <div class="flex items-center space-x-2">
               <svg-icon class="w-5 h-5" name="home" />
@@ -40,35 +46,35 @@ export default {
           className: 'Python',
           schoolName: 'Đại học Công nghiệp Hà Nội',
           numberOfCourses: 2,
-          numberOfMembers: 4
+          numberOfMembers: 4,
         },
         {
           className: 'Java',
           schoolName: 'Đại học Công nghiệp Hà Nội',
           numberOfCourses: 2,
-          numberOfMembers: 4
+          numberOfMembers: 4,
         },
         {
           className: 'Java',
           schoolName: 'Đại học Công nghệ, ĐHQGHN',
           numberOfCourses: 2,
-          numberOfMembers: 4
+          numberOfMembers: 4,
         },
         {
           className: 'JavaScript',
           schoolName: 'Đại học Bách Khoa Hà Nội',
           numberOfCourses: 2,
-          numberOfMembers: 4
+          numberOfMembers: 4,
         },
         {
           className: 'JavaScript',
           schoolName: 'Đại học Bách Khoa Hà Nội',
           numberOfCourses: 2,
-          numberOfMembers: 4
+          numberOfMembers: 4,
         },
-      ]
+      ],
     }
-  }
+  },
 }
 </script>
 <style lang="scss">
