@@ -62,7 +62,9 @@ export default {
     addClass() {
       this.$modal.show('add-class')
     },
-    createStudySet() {},
+    createStudySet() {
+      this.$router.push('create-set')
+    },
     addFolder() {},
   },
 }

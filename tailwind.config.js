@@ -12,6 +12,7 @@ module.exports = {
         brand: '#4C6FFF',
         subContent: '#292929',
         danger: '#EA5455',
+        warning: '#ffcd1f',
       },
       backgroundColor: {
         'button-main': '#4CB4F6',
