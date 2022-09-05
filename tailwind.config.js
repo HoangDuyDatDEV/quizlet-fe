@@ -4,16 +4,21 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Poppins', 'sans-serif'],
+        body: ['Montserrat', 'sans-serif'],
       },
       colors: {
         content: '#124E85',
         subtitle: '#9FA6B2',
+        brand: '#4C6FFF',
+        subContent: '#292929',
+        danger: '#EA5455',
       },
       backgroundColor: {
         'button-main': '#4CB4F6',
         content: '#2E3856',
         main: '#4CB4F6',
+        subMain: '#0A092D',
+        hover: '#F6F7FB',
       },
       borderColor: {
         content: '#124E85',

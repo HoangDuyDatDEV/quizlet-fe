@@ -7,7 +7,7 @@ export default {
   },
 
   publicRuntimeConfig: {
-    appName: process.env.APP_NAME || 'Hệ thống nhận dạng HAS',
+    appName: process.env.APP_NAME,
   },
   privateRuntimeConfig: {},
 
@@ -33,10 +33,15 @@ export default {
   css: ['ant-design-vue/dist/antd.css', '@/assets/css/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/ant-design-vue.js', '~/plugins/vue-tooltip.js'],
+  plugins: [
+    '~/plugins/ant-design-vue.js',
+    '~/plugins/vue-tooltip.js',
+    '~/plugins/vue-modal.js',
+    '~/plugins/vee-validate.js',
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: ['~/components'],
+  components: ['~/components', '~/components/common', '~/components/modals'],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -79,7 +84,7 @@ export default {
   googleFonts: {
     download: true,
     families: {
-      Poppins: [400, 500, 700],
+      Montserrat: [400, 500, 700],
     },
   },
 }

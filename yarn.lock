@@ -12176,6 +12176,11 @@ vary@^1.1.2, vary@~1.1.2:
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
 
+vee-validate@3:
+  version "3.4.14"
+  resolved "https://registry.yarnpkg.com/vee-validate/-/vee-validate-3.4.14.tgz#51f91c01d6660c43c6252c417c89fb07cdf8b8dd"
+  integrity sha512-Hqqic8G9WcRSIzCxiCPqMZv4qB8JE1lIQqIOLDm2K5BXUiL8d4a2+kqkanv8gQSGDzYpnCQZ7BO/T99Aj05T1Q==
+
 vendors@^1.0.0:
   version "1.0.4"
   resolved "https://registry.npmjs.org/vendors/-/vendors-1.0.4.tgz"
@@ -12257,6 +12262,13 @@ vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.npmjs.org/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz"
   integrity sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==
+
+vue-js-modal@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/vue-js-modal/-/vue-js-modal-2.0.1.tgz#748ba2533c5b5eaf8234c6320b148663357c1163"
+  integrity sha512-5FUwsH2zoxRKX4a7wkFAqX0eITCcIMunJDEfIxzHs2bHw9o20+Iqm+uQvBcg1jkzyo1+tVgThR/7NGU8djbD8Q==
+  dependencies:
+    resize-observer-polyfill "^1.5.1"
 
 vue-loader@^15.9.7:
   version "15.10.0"

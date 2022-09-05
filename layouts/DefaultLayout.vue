@@ -2,6 +2,7 @@
   <div>
     <TheHeader />
     <Nuxt />
+    <AddClass />
   </div>
 </template>
 

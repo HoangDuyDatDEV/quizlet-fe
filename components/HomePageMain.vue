@@ -7,30 +7,13 @@
         <span>02 lớp học được tạo</span>
       </div>
       <div class="w-full flex flex-wrap relative">
-        <div
+        <ClassCard
           v-for="(card, index) in dataCard"
           :key="`class-${index}`"
-          class="relative hover-card-item mr-4 my-2"
+          class="relative hover-card-item mr-3 my-2"
+          :item="card"
           style="width: 24%"
-        >
-          <div
-            class="bg-content space-y-3 rounded py-3 px-3 cursor-pointer hover:bg-gray-500 transition"
-          >
-            <div class="font-bold">{{ card.className }}</div>
-            <div class="flex items-center space-x-2">
-              <svg-icon class="w-5 h-5" name="home" />
-              <span class="font-medium">{{ card.schoolName }}</span>
-            </div>
-            <div class="flex items-center space-x-2">
-              <svg-icon class="w-5 h-5" name="document-text" />
-              <span>{{ card.numberOfCourses }} học phần</span>
-            </div>
-            <div class="flex items-center space-x-2">
-              <svg-icon class="w-5 h-5" name="user" />
-              <span>{{ card.numberOfMembers }} thành viên</span>
-            </div>
-          </div>
-        </div>
+        />
       </div>
     </div>
   </div>
@@ -77,17 +60,4 @@ export default {
   },
 }
 </script>
-<style lang="scss">
-.hover-card-item::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 8px;
-  background: #ffffff;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-</style>
+<style lang="scss"></style>
