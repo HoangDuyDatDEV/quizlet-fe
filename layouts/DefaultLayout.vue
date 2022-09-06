@@ -3,6 +3,8 @@
     <TheHeader />
     <Nuxt />
     <AddClass />
+    <AddFolder />
+    <AddStudySetInDetailPage />
   </div>
 </template>
 

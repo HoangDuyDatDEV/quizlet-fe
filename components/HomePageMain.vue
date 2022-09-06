@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <div class="w-4/5 my-0 mx-auto py-5 space-y-5">
-      <div class="font-medium text-xl">Lớp học của bạn:</div>
+      <div class="font-semibold text-xl">Lớp học của bạn:</div>
       <div class="flex space-x-3 items-center">
         <svg-icon class="w-6 h-6" name="user" />
         <span>02 lớp học được tạo</span>
@@ -26,30 +26,35 @@ export default {
     return {
       dataCard: [
         {
+          id: '001',
           className: 'Python',
           schoolName: 'Đại học Công nghiệp Hà Nội',
           numberOfCourses: 2,
           numberOfMembers: 4,
         },
         {
+          id: '002',
           className: 'Java',
           schoolName: 'Đại học Công nghiệp Hà Nội',
           numberOfCourses: 2,
           numberOfMembers: 4,
         },
         {
+          id: '003',
           className: 'Java',
           schoolName: 'Đại học Công nghệ, ĐHQGHN',
           numberOfCourses: 2,
           numberOfMembers: 4,
         },
         {
+          id: '004',
           className: 'JavaScript',
           schoolName: 'Đại học Bách Khoa Hà Nội',
           numberOfCourses: 2,
           numberOfMembers: 4,
         },
         {
+          id: '005',
           className: 'JavaScript',
           schoolName: 'Đại học Bách Khoa Hà Nội',
           numberOfCourses: 2,
@@ -58,6 +63,7 @@ export default {
       ],
     }
   },
+  methods: {},
 }
 </script>
 <style lang="scss"></style>

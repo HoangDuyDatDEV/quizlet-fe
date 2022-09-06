@@ -1,5 +1,8 @@
 <template>
-  <div class="bg-content space-y-3 rounded py-3 px-3 cursor-pointer">
+  <div
+    class="bg-content space-y-3 rounded py-3 px-3 cursor-pointer"
+    @click="viewDetail(item.id)"
+  >
     <div class="font-bold">{{ item.className }}</div>
     <div class="flex items-center space-x-2">
       <svg-icon class="w-5 h-5" name="home" />
@@ -23,6 +26,11 @@ export default {
     item: {
       type: Object,
       default: () => {},
+    },
+  },
+  methods: {
+    viewDetail(id) {
+      this.$router.push(`class/${id}`)
     },
   },
 }
