@@ -13,6 +13,7 @@ module.exports = {
         subContent: '#292929',
         danger: '#EA5455',
         warning: '#ffcd1f',
+        success: '#3ccfcf',
       },
       backgroundColor: {
         'button-main': '#4CB4F6',
@@ -28,6 +29,9 @@ module.exports = {
         '574px': '574px',
         '4/5': '80%',
         '1/5': '20%',
+      },
+      zIndex: {
+        999: 999,
       },
     },
   },

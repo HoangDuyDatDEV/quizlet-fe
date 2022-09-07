@@ -4,6 +4,7 @@
     <Nuxt />
     <AddClass />
     <AddFolder />
+    <AddMember />
     <AddStudySetInDetailPage />
   </div>
 </template>

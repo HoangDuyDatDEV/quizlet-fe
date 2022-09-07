@@ -60,7 +60,9 @@ export default {
   },
   methods: {
     addClass() {
-      this.$modal.show('add-class')
+      this.$modal.show('add-class', {
+        type: 'add',
+      })
     },
     createStudySet() {
       this.$router.push('/create-set')

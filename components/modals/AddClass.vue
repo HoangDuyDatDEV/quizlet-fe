@@ -9,11 +9,12 @@
     :height="'auto'"
     class="text-white"
     @opened="handleOpen"
+    @before-open="beforeOpen"
   >
     <div
       class="px-3 py-3 text-base font-bold text-title flex items-center justify-between"
     >
-      <div>Tạo lớp mới</div>
+      <div>{{ type === 'edit' ? 'Sửa lớp' : 'Tạo lớp mới' }}</div>
       <div
         class="w-5 h-5 flex items-center justify-center hover:text-danger cursor-pointer"
         @click="closeModal"
@@ -73,6 +74,7 @@ export default {
         description: '',
         schoolName: '',
       },
+      type: '',
     }
   },
   computed: {
@@ -85,6 +87,11 @@ export default {
     },
   },
   methods: {
+    beforeOpen(event) {
+      if (event?.params?.type) {
+        this.type = event.params.type
+      }
+    },
     closeModal() {
       this.$modal.hide('add-class')
     },
