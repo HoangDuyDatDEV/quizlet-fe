@@ -8,12 +8,13 @@
         </div>
         <TheListActionsInDetailPage />
       </div>
+      <MyLibrary/>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'DetailClass',
+    name: "DetailClass",
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white font-semibold w-1/2 mx-auto my-0 py-7">
+  <div>
     <div class="text-2xl font-semibold mb-7">Thư viện của bạn</div>
     <a-tabs default-active-key="1">
       <a-tab-pane key="1" tab="Các học phần">
