@@ -17,7 +17,7 @@
           <div class="space-y-5 w-2/3 mx-auto mt-5">
             <div>
               <input
-                v-model.trim="params.username"
+                v-model.trim="params.email"
                 type="text"
                 class="w-full input-create-set"
                 placeholder="Nhập tên đăng nhập hoặc email"
@@ -82,16 +82,28 @@ export default {
   data() {
     return {
       params: {
-        username: '',
+        email: '',
         password: '',
       },
       isShowPassword: false
     }
   },
   methods: {
-    login() {
-      this.$router.push('/')
-      this.resetParams()
+    async login() {
+      try {
+        const res = await this.$auth.loginWith('local', {
+          data: this.params
+        })
+        if(res?.sucess) {
+          this.$router.push('/')
+        } else {
+          alert(res.message)
+        }
+      } catch (err) {
+        alert(res.message)
+      }
+      // this.$router.push('/')
+      // this.resetParams()
     },
     resetParams() {
       this.params.password = ''
