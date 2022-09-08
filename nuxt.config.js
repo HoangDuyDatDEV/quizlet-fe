@@ -38,6 +38,7 @@ export default {
     '~/plugins/vue-tooltip.js',
     '~/plugins/vue-modal.js',
     '~/plugins/vee-validate.js',
+    '~/plugins/axios.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
