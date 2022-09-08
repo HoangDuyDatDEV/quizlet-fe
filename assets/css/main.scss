@@ -54,3 +54,17 @@ input::placeholder {
   width: 100%;
   background-color: #eceef7;
 }
+
+// antd tab css
+.ant-tabs {
+  color: #ffffff;
+  .ant-tabs-tab-active {
+    color: #ffffff;
+  }
+  .ant-tabs-ink-bar {
+    background-color: #4c6fff;
+  }
+  .ant-tabs-tab:hover {
+    color: #4c6fff;
+  }
+}

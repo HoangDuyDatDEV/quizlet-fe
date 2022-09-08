@@ -64,11 +64,11 @@ export default {
           },
         },
         {
-          name: 'Xóa mọi thành viên',
+          name: 'Xóa thành viên',
           icon: 'recycle',
           class: 'text-danger hover:bg-warning hover:text-black',
           action: () => {
-            this.deleteAll()
+            this.deleteMember()
           },
         },
       ],
@@ -93,8 +93,12 @@ export default {
         type: 'edit',
       })
     },
-    delete() {},
-    deleteAll() {},
+    delete() {
+      this.$modal.show('delete-class')
+    },
+    deleteMember() {
+      this.$modal.show('delete-member')
+    },
   },
 }
 </script>

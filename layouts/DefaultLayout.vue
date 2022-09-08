@@ -6,6 +6,8 @@
     <AddFolder />
     <AddMember />
     <AddStudySetInDetailPage />
+    <DeleteClass />
+    <DeleteMember />
   </div>
 </template>
 
