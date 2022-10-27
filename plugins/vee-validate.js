@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import moment from 'moment'
+// import moment from 'moment'
 import { ValidationObserver, ValidationProvider, extend } from 'vee-validate'
 import {
   required,
@@ -64,28 +64,6 @@ extend('min', {
 extend('regex', {
   ...regex,
   message: 'Định dạng không đúng !',
-})
-
-extend('minbirthday', {
-  params: ['length'],
-  validate: (value, args) => {
-    const birthdayAllow = moment()
-      .subtract(parseInt(args.length), 'years')
-      .toDate()
-    birthdayAllow.setHours(0, 0, 0, 0)
-    return value < birthdayAllow
-  },
-  message: 'Chưa đủ 18 tuổi',
-})
-
-extend('bi', {
-  validate: (value) => {
-    return (
-      value.includes('app.powerbi.com/view') ||
-      value.includes('pbi.mpi.gov.vn/reports/powerbi')
-    )
-  },
-  message: 'Link báo cáo không phù hợp',
 })
 
 extend('userandmail', {

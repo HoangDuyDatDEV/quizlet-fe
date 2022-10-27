@@ -30,8 +30,14 @@
                 class="w-full input-create-set"
                 placeholder="Nhập mật khẩu"
               />
-              <span class="absolute right-1 top-1/2 cursor-pointer" @click="isShowPassword = !isShowPassword">
-                <svg-icon class="w-5 h-5" :name="isShowPassword ? 'eye' : 'eye-hide'"/>
+              <span
+                class="absolute right-1 top-1/2 cursor-pointer"
+                @click="isShowPassword = !isShowPassword"
+              >
+                <svg-icon
+                  class="w-5 h-5"
+                  :name="isShowPassword ? 'eye' : 'eye-hide'"
+                />
               </span>
             </div>
             <div
@@ -59,13 +65,18 @@
                 class="w-full input-create-set"
                 placeholder="Nhập mật khẩu"
               />
-              <span class="absolute right-1 top-1/2 cursor-pointer" @click="isShowPassword = !isShowPassword">
-                <svg-icon class="w-5 h-5" :name="isShowPassword ? 'eye' : 'eye-hide'"/>
+              <span
+                class="absolute right-1 top-1/2 cursor-pointer"
+                @click="isShowPassword = !isShowPassword"
+              >
+                <svg-icon
+                  class="w-5 h-5"
+                  :name="isShowPassword ? 'eye' : 'eye-hide'"
+                />
               </span>
             </div>
             <div
               class="px-10 py-5 bg-warning rounded font-semibold text-xl text-center cursor-pointer"
-              @click="login"
             >
               Đăng ký
             </div>
@@ -78,6 +89,11 @@
 
 <script>
 export default {
+  beforeRouteEnter(to, from, next) {
+    next((vm) => {
+      vm.urlRedirect = from.path
+    })
+  },
   name: 'LoginPage',
   data() {
     return {
@@ -85,25 +101,31 @@ export default {
         email: '',
         password: '',
       },
-      isShowPassword: false
+      isShowPassword: false,
+      urlRedirect: '',
     }
   },
   methods: {
     async login() {
       try {
         const res = await this.$auth.loginWith('local', {
-          data: this.params
+          data: this.params,
         })
-        if(res?.sucess) {
-          this.$router.push('/')
+        const userInfo = { ...res.data.data }
+        localStorage.setItem('user', JSON.stringify(userInfo))
+        this.$notification.success({
+          message: 'Đăng nhập thành công',
+        })
+        if (this.urlRedirect) {
+          document.location.pathname = this.urlRedirect
         } else {
-          alert(res.message)
+          document.location.pathname = ''
         }
       } catch (err) {
-        alert(res.message)
+        this.$notification.error({
+          message: err.response.data.message || 'Đăng nhập thất bại',
+        })
       }
-      // this.$router.push('/')
-      // this.resetParams()
     },
     resetParams() {
       this.params.password = ''
